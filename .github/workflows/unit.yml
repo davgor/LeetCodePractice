@@ -1,6 +1,8 @@
 name: Unit tests for LeetCode Practice
 
 on:
+  workflow_dispatch:
+    branch: main
   push:
     branches: [ main, master ]
   pull_request:
