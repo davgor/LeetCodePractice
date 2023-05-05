@@ -1,9 +1,9 @@
 import { palindromeBrute, palindromeOofN } from '../src/palindrome';
 
-const palindromeTypes = [ palindromeBrute, palindromeOofN ]
+const functionTypes = [ palindromeBrute, palindromeOofN ]
 
 describe('testing palindrome file', () => {
-    palindromeTypes.forEach(function (palindrome) {
+    functionTypes.forEach(function (palindrome) {
         test('AAABBBAAA is a palindrome', () => {
             expect(palindrome('AAABBBAAA')).toBe(true);
           });
