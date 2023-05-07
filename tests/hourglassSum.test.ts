@@ -50,6 +50,14 @@ describe('testing index file', () => {
     ]
     expect(hourglassSum(matrix)).toBe(7);
   });
+  test('Matrix result should be 7', () => {
+    const matrix = [
+        [-1, -1, -1, -10, -10, -10],
+        [0, -1, 0, -10, -10, -10],
+        [-1, -1, -1, -10, -10, -10]
+    ]
+    expect(hourglassSum(matrix)).toBe(-7);
+  });
   test('Should error not tall enough', () => {
     const matrix = [
         [1, 1, 1, 0, 0, 0],
