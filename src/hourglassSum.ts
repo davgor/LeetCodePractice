@@ -5,7 +5,7 @@ export function hourglassSum(arr: number[][]): number {
         throw new Error("No hourglass possible")
     }
 
-    let max_sum = Number.MIN_VALUE;// tracker to store the current highest value
+    let max_sum: number;// tracker to store the current highest value
     for (let i = 0; i < x - 2; i++)
         {
             for (let j = 0; j < y - 2; j++)
@@ -14,8 +14,12 @@ export function hourglassSum(arr: number[][]): number {
                     (arr[i + 1][j + 1]) + //middle of hourglass
                   (arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2] // bottom of hourglass
                 );
-                max_sum = Math.max(max_sum, sum); //figure out if new number is larger then the last
+                if (max_sum !== undefined) {
+                    max_sum = Math.max(max_sum, sum); //figure out if new number is larger then the last
+                } else {
+                    max_sum = sum;
+                }
             }
         }
-    return max_sum;
+    return max_sum!;
 } 
