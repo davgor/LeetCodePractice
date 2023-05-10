@@ -1,6 +1,6 @@
-import { palindromeBrute, palindromeOofN } from '../src/palindrome';
+import { palindromeBrute, palindromeOofN, palindromeDoublePointer } from '../src/palindrome';
 
-const functionTypes = [ palindromeBrute, palindromeOofN ]
+const functionTypes = [ palindromeBrute, palindromeOofN, palindromeDoublePointer ]
 
 describe('testing palindrome file', () => {
     functionTypes.forEach(function (palindrome) {

@@ -26,3 +26,14 @@ export function palindromeOofN(text: any): Boolean {
 function isAlphaNumeric(value: string) {
     return value.match(/^[A-Za-z0-9]+$/);
 }
+
+export function palindromeDoublePointer(text: any): Boolean {
+    text = text.toString();
+    let j = text.length -1; //gets array length
+    for (let i = 0; i < j; i++, j--) {
+        if (text[i] !== text[j]) {
+            return false;
+        }
+    }
+    return true;
+}
