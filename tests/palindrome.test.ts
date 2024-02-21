@@ -10,6 +10,12 @@ describe('testing palindrome file', () => {
           test('DAVID is not a palindrome', () => {
             expect(palindrome('DAVID')).toBe(false);
           });
+          test('DAVAD is not a palindrome', () => {
+            expect(palindrome('DAVAD')).toBe(true);
+          });
+          test('DAVMAD is not a palindrome', () => {
+            expect(palindrome('DAVMAD')).toBe(false);
+          });
           test('hih hih is a palindrome', () => {
             expect(palindrome('hih hih')).toBe(true);
           });
